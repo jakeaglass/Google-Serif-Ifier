@@ -6,3 +6,6 @@ design to the old, far superior serif logo.
 
 Written by and (c) 2015 Jake Glass; released under the MIT license
 [http://jake.glass](http://jake.glass)
+
+Find it on the [Chrome Web Store](https://chrome.google.com/webstore/detail/google-serif-ifier/ipcapniojcbpigbbfofhogaacndollo)
+
