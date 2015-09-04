@@ -5,7 +5,7 @@
  * to change all instances of the Google logo from the new sans-serif
  * design to the old, far superior serif logo.
  *
- * Written by Jake Glass and released under MIT license
+ * Written by and (c) 2015 Jake Glass; released under the MIT license
  * http://jake.glass
  *
  */
