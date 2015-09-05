@@ -14,13 +14,20 @@
 var serifLogoUrl = chrome.extension.getURL("google-logo-2013-official.svg");
 var navLogoUrl = chrome.extension.getURL("google_nav_logo_composite.png");
 
+/*
+console.log(serifLogoUrl);
 console.log(navLogoUrl);
+*/
 
 //access the homepage logo
 var logo = document.getElementById("hplogo");
 
 //access the nonHp sprite image set with thumbnail logo
 var nonHpLogo = document.getElementById("logo");
+
+//access the accounts logo
+var accountsLogo = document.querySelectorAll(".logo-w");
+
 
 //change the homepage logo, if we're on a homepage
 if(logo){
@@ -32,8 +39,10 @@ if(logo){
 	}
 }
 
-//change the non-homepage logo, a sprite navigation image set (always appears in DOM)
-nonHpLogo.childNodes[0].src = navLogoUrl;
+if(nonHpLogo){
+	//change the non-homepage logo, a sprite navigation image set
+	nonHpLogo.childNodes[0].src = navLogoUrl;
+}
 
 //change the "navend" in the footer, ie. GOOOOOOGLE, with the sprite nav set, one by one
 //(this doesn't work 100% since most of the time, the search results content is loaded 
@@ -43,4 +52,9 @@ var navEndSpans = document.querySelectorAll(".csb");
 
 for(var i = 0; i < navEndSpans.length; i++){
 	navEndSpans[i].style.backgroundImage = "url(" + navLogoUrl + ")";
+}
+
+//change a logo that often appears on accounts.google pages and others
+if(accountsLogo[0]){
+	accountsLogo[0].style.backgroundImage = "url(" + serifLogoUrl + ")";
 }
